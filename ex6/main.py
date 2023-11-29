@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import time
-#import explorerhat
+import explorerhat
 
 print("""
 SD_GIT_2324_U06_template
@@ -76,7 +76,7 @@ def visualizeBinary(decimal):
     for i in range(4):
         print(i)
         if binArray[i] == 1:
-            # explorerhat.light[3 - i].on()
+            explorerhat.light[3 - i].on()
             print("Licht {} ist an!".format(4 - i))
 # Here we initialize our counter variable
 counterInBin = [0] * 4
@@ -182,5 +182,5 @@ def evaluateButtons(channel, event):
         print("reset")
 # In order to invoke the function evaluateButtons() on a button press
 # we need to register this function as a handler for button press events
-#explorerhat.touch.pressed(evaluateButtons)
-#explorerhat.pause()
+explorerhat.touch.pressed(evaluateButtons)
+explorerhat.pause()
